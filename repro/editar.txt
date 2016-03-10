@@ -1,0 +1,6 @@
+editar la ip 
+js/player1.js
+
+songTitle.php
+
+history.php
