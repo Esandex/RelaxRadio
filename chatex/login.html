@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Relax Radio Chat</title>
+
+    <link rel="stylesheet" href="css/style2.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <html lang="en-US">
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <![endif]-->
+
+  </head>
+
+  <body>
+<script>
+		// initialize and setup facebook js sdk
+		window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '102893536807416',
+		      xfbml      : true,
+		      version    : 'v2.6'
+		    });
+		    FB.getLoginStatus(function(response) {
+		    	if (response.status === 'connected') {
+		    		document.getElementById('status').innerHTML = 'We are connected.';
+		    		FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
+				var name = response.name;
+				var foto = response.id;
+				window.location='index.html?name='+name+'&foto=http://graph.facebook.com/'+foto+'/picture?type=large';  
+			});
+		    	} else if (response.status === 'not_authorized') {
+		    		document.getElementById('status').innerHTML = 'We are not logged in.'
+		    	} else {
+		    		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
+		    	}
+		    });
+		};
+		(function(d, s, id){
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) {return;}
+		    js = d.createElement(s); js.id = id;
+		    js.src = "//connect.facebook.net/en_US/sdk.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		
+		// login with facebook with extra permissions
+		function login() {
+			FB.login(function(response) {
+				if (response.status === 'connected') {
+		    		document.getElementById('status').innerHTML = 'We are connected.';
+		    		FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
+				var name = response.name;
+				var foto = response.id;
+				window.location='index.html?name='+name+'&foto=http://graph.facebook.com/'+foto+'/picture?type=large';  
+			});	  
+		    	} else if (response.status === 'not_authorized') {
+		    		document.getElementById('status').innerHTML = 'We are not logged in.'
+		    	} else {
+		    		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
+		    	}
+			}, {scope: 'email'});
+		}
+		// getting basic user info
+		function getInfo() {
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
+				var name = response.name;
+				var foto = response.id;
+				window.location='index.html?name='+name+'&foto=http://graph.facebook.com/'+foto+'/picture?type=large';  
+			});
+		}
+	</script>
+	
+    <div class="container">
+
+      <div id="login">
+
+        <form action="javascript:void(0);" method="get">
+
+          <fieldset class="clearfix">
+            <p><center><img src="images/logo.png"></center></p>
+            <p><center><div id="status"></div></center></p>
+            <p><center><input id="login1" type="image" src="images/login.png" onclick="login()"></center></p>
+          </fieldset>
+
+        </form>
+
+        <p>Created By <a href="http://www.creativepmg.com/">Creative PMG</a><span class="fontawesome-arrow-right"></span></p>
+
+      </div> <!-- end login -->
+
+    </div>
+
+  </body>
+</html>
+
+</body>
+
+</html>

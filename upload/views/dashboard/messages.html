@@ -1,0 +1,23 @@
+<div>
+	<h2>Messages <small>Admin tool</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+			<table class="table table-striped">
+				<tr>
+  <th>#</th>
+  <th>Photo</th>
+  <th>Message</th>
+  <th>Operations</th>
+</tr>
+<tr dir-paginate="message in messages | itemsPerPage:20">
+	<td>{{message.id}}</td>
+	<td><img ng-src="{{message.photo}}" class="img-circle" width="50"></td>
+	<td>{{message.message}}</td>
+	<td><a ng-click="delete(message.id)" class="btn btn-danger">Delete</a></td>
+</tr>
+
+</table>
+				<dir-pagination-controls template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+		</div>
+	</div>
+</div>
