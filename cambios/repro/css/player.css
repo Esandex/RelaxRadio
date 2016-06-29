@@ -1,0 +1,223 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+body{
+	background-color:#323232;
+}
+
+#container{
+	width:525px; 
+	height:auto; 
+	position:absolute;
+	margin:0;
+	padding:0;
+	z-index:10;
+}
+
+#mainPanel{
+	width:525px; 
+	height:92px; 
+	position:absolute; 
+	top:0px; 
+	left:0px;
+	background-image:url(../images/MainPanel.png);
+	background-repeat:no-repeat;	
+}
+
+#currentSong{
+	width:372px; 
+	height:18px; 
+	position:absolute; 
+	top:8px; 
+	left:52px;
+	padding-left:4px;
+	padding-top:6px;
+	overflow:hidden;
+	font-size:14px; color:#f39; 
+	font-family: 'Arimo', Tahoma, Geneva, sans-serif;
+}
+
+#songHistoryContainer{
+	width:468px; 
+	height:210px; 
+	position:absolute; 
+	top:91px;
+	padding-top:10px;
+	left:56px;
+	overflow:hidden;
+}
+
+#songHistoryBackground{
+	width:472px; 
+	height:220px; 
+	position:relative; 
+	top:-227px; 
+	left:0px;
+	overflow:hidden;
+	background-image:url(../images/SongHistoryBackground.png);
+	background-repeat:no-repeat;	
+}
+
+#songHistoryText{
+	width:454px; 
+	height:207px;
+	position:absolute;
+	padding-left:12px;
+	padding-top:8px;
+	overflow:hidden;
+	font-size:11px; 
+	color:#999; 
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#coverGlass{
+	width:80px; 
+	height:80px;  
+	left:438px; 
+	top:6px;
+	position:absolute;
+	background-image:url(../images/GlassCover.png);
+	background-repeat:no-repeat;
+	z-index:10;
+	cursor:pointer;
+}
+
+#coverHolder{
+	width:80px; 
+	height:80px;  
+	left:438px; 
+	top:6px; 
+	position:absolute;
+	background-color:#222;
+}
+
+#coverPreloader{
+	width:32px; 
+	height:32px;  
+	color:#fff; 
+	left:24px;
+	top:24px; 
+	position:absolute;
+}
+
+#playBtn{
+	width:20px; 
+	height:20px; 
+	position:absolute; 
+	top:15px; 
+	left:17px;
+	background-image:url(../images/play.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+
+#stopBtn{
+	width:20px; 
+	height:20px; 
+	position:absolute; 
+	top:15px; 
+	left:15px;
+	background-image:url(../images/stop.png);
+	background-repeat:no-repeat;
+    cursor:pointer
+}
+	
+#slider{
+	width:100px;
+	position:absolute; 
+	top:60px; 
+	left:60px;
+}
+
+#songHistoryBtn{
+	width:85px;
+	height:30px;
+	position:absolute;
+	background-image:url(../images/SongHistoryNormal.png);
+	background-repeat:no-repeat;	
+	top:53px; 
+	left:343px;
+	cursor:pointer;
+}
+
+#eqHolder {
+	top: -15px;
+	left: 242px;
+	position: absolute;
+	width: 30px;
+	height: 170px;
+	background-color:#222;
+	overflow:hidden;
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=-90);
+}
+
+#eqOne {
+	top:20px;
+	left:0px;	
+	position: absolute;
+	width: 0px;
+	height: 20px;
+	background-color:#f39;
+}
+
+#eqTwo {
+	top:42px;
+	left: 0px;
+	position: absolute;
+	width: 0px;
+	height: 20px;
+	background-color:#f39;
+}
+
+#eqThree {
+	top:64px;
+	left: 0px;
+	position: absolute;
+	width: 0px;
+	height: 20px;
+	background-color:#f39;
+}
+
+#eqFour {
+	top:86px;
+	left: 0px;
+	position: absolute;
+	width: 0px;
+	height: 20px;
+	background-color:#f39;
+}
+
+#eqFive {
+	top:108px;
+	left: 0px;
+	position: absolute;
+	width: 0px;
+	height: 20px;
+	background-color:#f39;
+}
+
+#eqSix {
+	top:130px;
+	left: 0px;
+	position: absolute;
+	width: 0px;
+	height: 20px;
+	background-color:#f39;
+}
+
+#usedMemory{
+	top:15px;
+	left: 380px;
+	position: absolute;
+	width: 40px;
+	height: 16px;
+	background-color:#f39;
+	color:#fff;
+	text-align:center;
+	padding-top:2px;
+	font-size:10px; color:#fff; 
+	font-family: Tahoma, Geneva, sans-serif;
+	display:none;
+}
